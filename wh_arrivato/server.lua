@@ -1,5 +1,5 @@
-RegisterServerEvent('framework:shareDisplay2')
-AddEventHandler('framework:shareDisplay2', function(text)
-    TriggerClientEvent('framework:triggerDisplay2', -1, text, source)
+RegisterServerEvent('framework:shareDisplay')
+AddEventHandler('framework:shareDisplay', function(text)
+    TriggerClientEvent('framework:triggerDisplay', -1, text, source)
 end)
 

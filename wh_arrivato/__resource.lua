@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'Iari Normanno aka who$y '
 description 'Esce la scritta "Appena Arrivato" sulla testa appena un player si connette'
-version '1.0.0'
+version '1.0.1'
 
 
 client_script 'client.lua'

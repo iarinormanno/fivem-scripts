@@ -1,21 +1,20 @@
-local color = {r = 255, g = 255, b = 255, alpha = 255} 
-local font = 2
+local color = {r = 255, g = 255, b = 255, alpha = 255} -- colore della scritta sopra la testa 
+local font = 2 -- font per la scritta sopra la testa, puoi scegliere tra {1,2,3,4}
 local nbrDisplaying = 1
-local firstspawn = 0
+local firstspawn = 0 -- non cambiarlo
 
 
 AddEventHandler('playerSpawned', function(spawn)
     if firstspawn == 0 then
     local msg = "~w~Appena Arrivato"
-    TriggerServerEvent("framework:shareDisplay2", msg, source)
+    TriggerServerEvent("framework:shareDisplay", msg, source)
     local color = {r = 255, g = 255, b = 255, alpha = 255}
     firstspawn = 1
     end
 end)
 
-
-    RegisterNetEvent('framework:triggerDisplay2')
-    AddEventHandler('framework:triggerDisplay2', function(text, source)
+    RegisterNetEvent('framework:triggerDisplay')
+    AddEventHandler('framework:triggerDisplay', function(text, source)
         local offset = 1 + (nbrDisplaying*0.14)
         Display2(GetPlayerFromServerId(source), text, offset)
     end)
