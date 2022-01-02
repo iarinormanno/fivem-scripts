@@ -19,7 +19,7 @@ end)
         Display2(GetPlayerFromServerId(source), text, offset)
     end)
 
-    function Display2(mePlayer, text, offset)
+    function Display(mePlayer, text, offset)
         local displaying = true
     
         Citizen.CreateThread(function()
